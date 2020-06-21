@@ -9,21 +9,21 @@
 import Foundation
 
 class ForecastWeather: CustomStringConvertible, Decodable {
-	var weather: Weather
+	var weather: [Weather]
 	var main: Main
-	var dateTime: String
+	var dt_txt: String
 	
 	var description: String {
 		return """
-		dateTime: \(dateTime)
+		dateTime: \(dt_txt)
 		temperature: \(main.temp)
-		icon: \(weather.icon)
+		icon: \(weather.first?.icon)
 		"""
 	}
 	
-	init(weather: Weather, main: Main, dateTime: String) {
+	init(weather: [Weather], main: Main, dateTime: String) {
 		self.weather = weather
 		self.main = main
-		self.dateTime = dateTime
+		self.dt_txt = dateTime
 	}
 }

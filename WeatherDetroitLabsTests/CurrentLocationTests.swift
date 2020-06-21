@@ -1,5 +1,5 @@
 //
-//  WeatherDetroitLabsTests.swift
+//  CurrentLocationTests.swift
 //  WeatherDetroitLabsTests
 //
 //  Created by Raymond Gatz on 6/20/20.
@@ -9,8 +9,10 @@
 import XCTest
 @testable import WeatherDetroitLabs
 
-class WeatherDetroitLabsTests: XCTestCase {
+class CurrentLocationTests: XCTestCase {
 
+	let location = CurrentLocation.init(mock: true)
+	
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -18,17 +20,13 @@ class WeatherDetroitLabsTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+	
+	func testCoordinateFetch() {
+		let lat = location.location?.latitude
+		let long = location.location?.longitude
+		
+		XCTAssertEqual(lat, 39.7686291, "Latitude is not 39.7686291") // mock location lat
+		XCTAssertEqual(long, -86.1607217, "Longitude is not -86.1607217") // mock location long
+	}
 
 }
