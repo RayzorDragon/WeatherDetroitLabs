@@ -11,5 +11,6 @@ import Foundation
 enum NetworkError: Error {
 	case invalidURL
 	case parseError
+	case noData
 	case requestError
 }

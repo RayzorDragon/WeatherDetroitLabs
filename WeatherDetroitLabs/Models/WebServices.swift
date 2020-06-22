@@ -9,53 +9,40 @@
 import Foundation
 
 class WebServices {
-	var session: URLSession!
-	var location: CurrentLocation!
+	private let networkService: Network
+	var session: URLSession
+	var location: CurrentLocation
+	
+	init(session: URLSession, location: CurrentLocation) {
+		self.session = session
+		self.networkService = Network.init(session: session)
+		self.location = location
+	}
 	
 	func getCurrentTemperature(completion: @escaping (CurrentWeather?, Error?) -> Void) {
-		guard let url = buildCurrentTempURL() else { fatalError() }
-		session.dataTask(with: url) { (data, response, error) in
-			
-			guard error == nil else {
-				completion(nil, error)
-				return
-			}
-			
-			guard let data = data else {
-				completion(nil, NSError(domain: "no data", code: 10, userInfo: nil))
-				return
-			}
-			
-			do {
-				let currentTemp = try JSONDecoder().decode(CurrentWeather.self, from: data)
-				completion(currentTemp, nil)
-			} catch {
-				completion(nil, error)
-			}
-		}.resume()
+		guard let url = buildCurrentTempURL() else {
+			completion(nil, NetworkError.invalidURL)
+			return
+		}
+		networkService.loadDataFromWeb(url: url, type: CurrentWeather.self) { (currentWeather, error) in
+			completion(currentWeather, error)
+			return
+		}
 	}
 	
 	func getForecastTemperature(completion: @escaping (FiveDayWeather?, Error?) -> Void) {
-		guard let url = buildForecastTempURL() else { fatalError() }
-		session.dataTask(with: url) { (data, response, error) in
-			
-			guard error == nil else {
-				completion(nil, error)
-				return
-			}
-			
-			guard let data = data else {
-				completion(nil, NSError(domain: "no data", code: 10, userInfo: nil))
-				return
-			}
-			do {
-				let forecastTemp = try JSONDecoder().decode(FiveDayWeather.self, from: data)
-				completion(forecastTemp, nil)
-			} catch {
-				completion(nil, error)
-			}
-		}.resume()
+		guard let url = buildForecastTempURL() else {
+			completion(nil, NetworkError.invalidURL)
+			return
+		}
+		
+		networkService.loadDataFromWeb(url: url, type: FiveDayWeather.self) { (forecast, error) in
+			completion(forecast, error)
+			return
+		}
 	}
+	
+	// MARK: - Build URLs
 	
 	private func buildCurrentTempURL() -> URL? {
 		var urlString = Constants().openWeatherCurrentURL
@@ -70,6 +57,8 @@ class WebServices {
 		
 		return URL(string: urlString)
 	}
+	
+	// MARK: - Query components for URLs
 	
 	private func allQueryComponents() -> String {
 		var queries = ""

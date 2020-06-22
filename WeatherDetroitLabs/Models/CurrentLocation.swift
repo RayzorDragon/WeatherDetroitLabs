@@ -9,6 +9,10 @@
 import Foundation
 import CoreLocation
 
+/*
+rather than just utilizing CLLocationManager, this allows for a testable and
+mockable system to also be used if desired.
+*/
 class CurrentLocation {
 	private var locationManager: LocationManager
 	var location: CLLocationCoordinate2D?

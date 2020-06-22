@@ -9,6 +9,11 @@
 import Foundation
 
 class FiveDayWeather: CustomStringConvertible, Decodable {
+	/*
+	A collection of weather forecasts in the next 5 days seperated by 3 hour
+	intervals, each forecast only requires a temperature, the weather icon, and
+	the time it's for.
+	*/
 	var list: [ForecastWeather]
 	
 	var description: String {

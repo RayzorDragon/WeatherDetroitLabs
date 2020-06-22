@@ -9,6 +9,11 @@
 import Foundation
 
 class CurrentWeather: CustomStringConvertible, Decodable {
+	/*
+	As the only item we care about from the current weather forecast is
+	currently the Temperature, we're only decoding the 'Main' item and then
+	only the temperature of it
+	*/
 	var main: Main
 	
 	var description: String {
