@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B2A2529249E7F1C00148AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A2528249E7F1C00148AE7 /* AppDelegate.swift */; };
 		7B2A252B249E7F1C00148AE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A252A249E7F1C00148AE7 /* SceneDelegate.swift */; };
-		7B2A252D249E7F1C00148AE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A252C249E7F1C00148AE7 /* ViewController.swift */; };
+		7B2A252D249E7F1C00148AE7 /* CurrentTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A252C249E7F1C00148AE7 /* CurrentTempViewController.swift */; };
 		7B2A2530249E7F1C00148AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2A252E249E7F1C00148AE7 /* Main.storyboard */; };
 		7B2A2532249E7F1F00148AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2A2531249E7F1F00148AE7 /* Assets.xcassets */; };
 		7B2A2535249E7F1F00148AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2A2533249E7F1F00148AE7 /* LaunchScreen.storyboard */; };
@@ -27,9 +27,17 @@
 		7B2A256F249ED2C500148AE7 /* CLLocationManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A256E249ED2C500148AE7 /* CLLocationManager+Extension.swift */; };
 		7B2A2571249ED30500148AE7 /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A2570249ED30500148AE7 /* MockLocationManager.swift */; };
 		7B2A2575249ED54B00148AE7 /* CurrentLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A2574249ED54B00148AE7 /* CurrentLocationTests.swift */; };
-		7B2A2578249EED9700148AE7 /* WebServicesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A2577249EED9700148AE7 /* WebServicesTest.swift */; };
+		7B2A2578249EED9700148AE7 /* WebServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A2577249EED9700148AE7 /* WebServicesTests.swift */; };
 		7B2A257C249FDCAC00148AE7 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A257B249FDCAC00148AE7 /* MockURLSession.swift */; };
 		7B2A257F249FED7700148AE7 /* MockTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A257E249FED7700148AE7 /* MockTask.swift */; };
+		7B2A25B324A1294500148AE7 /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25B224A1294500148AE7 /* ForecastTableViewController.swift */; };
+		7B2A25B524A12A2200148AE7 /* TemperatureHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25B424A12A2200148AE7 /* TemperatureHandler.swift */; };
+		7B2A25B724A1314A00148AE7 /* TemperatureHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25B624A1314A00148AE7 /* TemperatureHandlerTests.swift */; };
+		7B2A25B924A1363E00148AE7 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25B824A1363E00148AE7 /* DataStore.swift */; };
+		7B2A25BB24A1409B00148AE7 /* DataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25BA24A1409B00148AE7 /* DataStoreTests.swift */; };
+		7B2A25BE24A16B4300148AE7 /* TestConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25BD24A16B4300148AE7 /* TestConstant.swift */; };
+		7B2A25C124A1720700148AE7 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25C024A1720700148AE7 /* ForecastTableViewCell.swift */; };
+		7B2A25C424A1766A00148AE7 /* UIIamgeView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25C324A1766A00148AE7 /* UIIamgeView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +54,7 @@
 		7B2A2525249E7F1C00148AE7 /* WeatherDetroitLabs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDetroitLabs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2A2528249E7F1C00148AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B2A252A249E7F1C00148AE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B2A252C249E7F1C00148AE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B2A252C249E7F1C00148AE7 /* CurrentTempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTempViewController.swift; sourceTree = "<group>"; };
 		7B2A252F249E7F1C00148AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B2A2531249E7F1F00148AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B2A2534249E7F1F00148AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,9 +75,17 @@
 		7B2A256E249ED2C500148AE7 /* CLLocationManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Extension.swift"; sourceTree = "<group>"; };
 		7B2A2570249ED30500148AE7 /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
 		7B2A2574249ED54B00148AE7 /* CurrentLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationTests.swift; sourceTree = "<group>"; };
-		7B2A2577249EED9700148AE7 /* WebServicesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesTest.swift; sourceTree = "<group>"; };
+		7B2A2577249EED9700148AE7 /* WebServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesTests.swift; sourceTree = "<group>"; };
 		7B2A257B249FDCAC00148AE7 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		7B2A257E249FED7700148AE7 /* MockTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTask.swift; sourceTree = "<group>"; };
+		7B2A25B224A1294500148AE7 /* ForecastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
+		7B2A25B424A12A2200148AE7 /* TemperatureHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureHandler.swift; sourceTree = "<group>"; };
+		7B2A25B624A1314A00148AE7 /* TemperatureHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureHandlerTests.swift; sourceTree = "<group>"; };
+		7B2A25B824A1363E00148AE7 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		7B2A25BA24A1409B00148AE7 /* DataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreTests.swift; sourceTree = "<group>"; };
+		7B2A25BD24A16B4300148AE7 /* TestConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstant.swift; sourceTree = "<group>"; };
+		7B2A25C024A1720700148AE7 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		7B2A25C324A1766A00148AE7 /* UIIamgeView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIamgeView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				7B2A2541249E7F1F00148AE7 /* Info.plist */,
+				7B2A25BD24A16B4300148AE7 /* TestConstant.swift */,
+				7B2A2577249EED9700148AE7 /* WebServicesTests.swift */,
 				7B2A2574249ED54B00148AE7 /* CurrentLocationTests.swift */,
-				7B2A2577249EED9700148AE7 /* WebServicesTest.swift */,
+				7B2A25B624A1314A00148AE7 /* TemperatureHandlerTests.swift */,
+				7B2A25BA24A1409B00148AE7 /* DataStoreTests.swift */,
 			);
 			path = WeatherDetroitLabsTests;
 			sourceTree = "<group>";
@@ -137,15 +156,13 @@
 		7B2A254A249E7F4E00148AE7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7B2A25BC24A14D8D00148AE7 /* Objects */,
 				7B2A254F249E816700148AE7 /* Network.swift */,
 				7B2A2563249E946600148AE7 /* NetworkError.swift */,
 				7B2A2565249E94DA00148AE7 /* WebServices.swift */,
-				7B2A255D249E8EA200148AE7 /* CurrentWeather.swift */,
-				7B2A255F249E8FA900148AE7 /* FiveDayWeather.swift */,
-				7B2A2561249E908A00148AE7 /* ForecastWeather.swift */,
-				7B2A2553249E871300148AE7 /* Weather.swift */,
-				7B2A2557249E893B00148AE7 /* Main.swift */,
 				7B2A2569249ECE7400148AE7 /* CurrentLocation.swift */,
+				7B2A25B424A12A2200148AE7 /* TemperatureHandler.swift */,
+				7B2A25B824A1363E00148AE7 /* DataStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +170,7 @@
 		7B2A254B249E7F5B00148AE7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B2A25BF24A171E600148AE7 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,7 +178,8 @@
 		7B2A254C249E7F7500148AE7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7B2A252C249E7F1C00148AE7 /* ViewController.swift */,
+				7B2A252C249E7F1C00148AE7 /* CurrentTempViewController.swift */,
+				7B2A25B224A1294500148AE7 /* ForecastTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +205,7 @@
 		7B2A256B249ED1D400148AE7 /* Mocks and Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7B2A25C224A1765200148AE7 /* UIImageView */,
 				7B2A257D249FED6100148AE7 /* URLSessionDataTask */,
 				7B2A257A249FDC9500148AE7 /* URLSession */,
 				7B2A2576249EDAD500148AE7 /* Location */,
@@ -217,6 +237,34 @@
 				7B2A257E249FED7700148AE7 /* MockTask.swift */,
 			);
 			path = URLSessionDataTask;
+			sourceTree = "<group>";
+		};
+		7B2A25BC24A14D8D00148AE7 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7B2A255D249E8EA200148AE7 /* CurrentWeather.swift */,
+				7B2A255F249E8FA900148AE7 /* FiveDayWeather.swift */,
+				7B2A2561249E908A00148AE7 /* ForecastWeather.swift */,
+				7B2A2553249E871300148AE7 /* Weather.swift */,
+				7B2A2557249E893B00148AE7 /* Main.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		7B2A25BF24A171E600148AE7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7B2A25C024A1720700148AE7 /* ForecastTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7B2A25C224A1765200148AE7 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				7B2A25C324A1766A00148AE7 /* UIIamgeView+Extension.swift */,
+			);
+			path = UIImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,24 +368,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B2A252D249E7F1C00148AE7 /* ViewController.swift in Sources */,
+				7B2A252D249E7F1C00148AE7 /* CurrentTempViewController.swift in Sources */,
 				7B2A255E249E8EA200148AE7 /* CurrentWeather.swift in Sources */,
 				7B2A2571249ED30500148AE7 /* MockLocationManager.swift in Sources */,
 				7B2A2566249E94DA00148AE7 /* WebServices.swift in Sources */,
 				7B2A257F249FED7700148AE7 /* MockTask.swift in Sources */,
 				7B2A257C249FDCAC00148AE7 /* MockURLSession.swift in Sources */,
 				7B2A2529249E7F1C00148AE7 /* AppDelegate.swift in Sources */,
+				7B2A25B924A1363E00148AE7 /* DataStore.swift in Sources */,
+				7B2A25C124A1720700148AE7 /* ForecastTableViewCell.swift in Sources */,
 				7B2A2558249E893B00148AE7 /* Main.swift in Sources */,
 				7B2A2550249E816700148AE7 /* Network.swift in Sources */,
 				7B2A2562249E908A00148AE7 /* ForecastWeather.swift in Sources */,
 				7B2A252B249E7F1C00148AE7 /* SceneDelegate.swift in Sources */,
 				7B2A2554249E871300148AE7 /* Weather.swift in Sources */,
 				7B2A2564249E946600148AE7 /* NetworkError.swift in Sources */,
+				7B2A25C424A1766A00148AE7 /* UIIamgeView+Extension.swift in Sources */,
 				7B2A256D249ED22900148AE7 /* LocationManager.swift in Sources */,
 				7B2A256A249ECE7400148AE7 /* CurrentLocation.swift in Sources */,
+				7B2A25B324A1294500148AE7 /* ForecastTableViewController.swift in Sources */,
 				7B2A2560249E8FA900148AE7 /* FiveDayWeather.swift in Sources */,
 				7B2A2568249E957A00148AE7 /* Constants.swift in Sources */,
 				7B2A256F249ED2C500148AE7 /* CLLocationManager+Extension.swift in Sources */,
+				7B2A25B524A12A2200148AE7 /* TemperatureHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,8 +398,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B2A2578249EED9700148AE7 /* WebServicesTest.swift in Sources */,
+				7B2A2578249EED9700148AE7 /* WebServicesTests.swift in Sources */,
+				7B2A25BB24A1409B00148AE7 /* DataStoreTests.swift in Sources */,
+				7B2A25BE24A16B4300148AE7 /* TestConstant.swift in Sources */,
 				7B2A2575249ED54B00148AE7 /* CurrentLocationTests.swift in Sources */,
+				7B2A25B724A1314A00148AE7 /* TemperatureHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

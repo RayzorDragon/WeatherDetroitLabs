@@ -18,8 +18,23 @@ class Weather: CustomStringConvertible, Decodable {
 		"""
 	}
 	
+	var iconURLString: String {
+		var urlString = Constants.openWeatherIconURL
+		urlString.append(icon)
+		urlString.append("@2x.png")
+		return urlString
+	}
+	
 	init(icon: String) {
 
 		self.icon = icon
+	}
+	
+	
+}
+
+extension Weather: Equatable {
+	static func == (lhs: Weather, rhs: Weather) -> Bool {
+		lhs.icon == rhs.icon
 	}
 }

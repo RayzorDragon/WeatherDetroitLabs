@@ -27,3 +27,13 @@ class ForecastWeather: CustomStringConvertible, Decodable {
 		self.dt_txt = dateTime
 	}
 }
+
+extension ForecastWeather: Equatable {
+	static func == (lhs: ForecastWeather, rhs: ForecastWeather) -> Bool {
+		lhs.weather == rhs.weather &&
+			lhs.main == rhs.main &&
+			lhs.dt_txt == rhs.dt_txt
+	}
+	
+	
+}

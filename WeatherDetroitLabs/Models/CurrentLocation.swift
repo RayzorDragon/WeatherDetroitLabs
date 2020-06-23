@@ -13,15 +13,35 @@ import CoreLocation
 rather than just utilizing CLLocationManager, this allows for a testable and
 mockable system to also be used if desired.
 */
-class CurrentLocation {
+class CurrentLocation: NSObject {
 	private var locationManager: LocationManager
 	var location: CLLocationCoordinate2D?
 	init(mock: Bool = false) {
 		if mock { locationManager = MockLocationManager() }
 		else { locationManager = CLLocationManager() }
-		locationManager.requestWhenInUseAuthorization()
+		super.init()
+		
+		locationManager.delegate = self
 		if (locationManager.getAuthorizationStatus() == .authorizedWhenInUse || locationManager.getAuthorizationStatus() == .authorizedAlways ) {
 			self.location = locationManager.location?.coordinate
+		} else {
+			locationManager.requestWhenInUseAuthorization()
 		}
 	}
+}
+
+extension CurrentLocation: CLLocationManagerDelegate {
+	func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+		switch status {
+		case .authorizedWhenInUse, .authorizedAlways:
+			self.location = locationManager.location?.coordinate
+		default:
+			break
+		}
+	}
+	
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		self.location = locations.last?.coordinate
+	}
+	
 }

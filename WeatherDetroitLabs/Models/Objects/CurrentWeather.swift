@@ -22,3 +22,11 @@ class CurrentWeather: CustomStringConvertible, Decodable {
 		"""
 	}
 }
+
+extension CurrentWeather: Equatable {
+	static func == (lhs: CurrentWeather, rhs: CurrentWeather) -> Bool {
+		lhs.main == rhs.main
+	}
+	
+	
+}

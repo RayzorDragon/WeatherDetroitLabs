@@ -11,11 +11,21 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+	let webService = WebServices(session: URLSession.shared, location: CurrentLocation())
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		loadAllData()
 		return true
+	}
+	
+	private func loadAllData() {
+		webService.getCurrentTemperature { (currentWeather, error) in
+			DataStore.sharedInstance.updateCurrent(update: currentWeather)
+		}
+		webService.getForecastTemperature { (fiveDayWeather, error) in
+			DataStore.sharedInstance.updateForecast(update: fiveDayWeather)
+		}
 	}
 
 	// MARK: UISceneSession Lifecycle

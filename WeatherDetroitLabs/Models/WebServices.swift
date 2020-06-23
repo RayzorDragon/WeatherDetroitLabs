@@ -45,14 +45,14 @@ class WebServices {
 	// MARK: - Build URLs
 	
 	private func buildCurrentTempURL() -> URL? {
-		var urlString = Constants().openWeatherCurrentURL
+		var urlString = Constants.openWeatherCurrentURL
 		urlString.append(self.allQueryComponents())
 		
 		return URL(string: urlString)
 	}
 	
 	private func buildForecastTempURL() -> URL? {
-		var urlString = Constants().openWeatherForcastURL
+		var urlString = Constants.openWeatherForcastURL
 		urlString.append(self.allQueryComponents())
 		
 		return URL(string: urlString)
@@ -82,7 +82,7 @@ class WebServices {
 	}
 	
 	private func buildAPIKeyQueryComponent() -> String {
-		return "appid=\(Constants().openWeatherAPIKey)"
+		return "appid=\(Constants.openWeatherAPIKey)"
 	}
 	
 	private func buildUnitQueryComponent() -> String {

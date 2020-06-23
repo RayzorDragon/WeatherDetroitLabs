@@ -30,3 +30,10 @@ class FiveDayWeather: CustomStringConvertible, Decodable {
 		self.list = list
 	}
 }
+
+extension FiveDayWeather: Equatable {
+	static func == (lhs: FiveDayWeather, rhs: FiveDayWeather) -> Bool {
+		lhs.list == rhs.list
+	}
+	
+}

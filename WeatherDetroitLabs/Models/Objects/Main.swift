@@ -22,3 +22,11 @@ class Main: CustomStringConvertible, Decodable {
 		self.temp = temp
 	}
 }
+
+extension Main: Equatable {
+	static func == (lhs: Main, rhs: Main) -> Bool {
+		lhs.temp == rhs.temp
+	}
+	
+	
+}
