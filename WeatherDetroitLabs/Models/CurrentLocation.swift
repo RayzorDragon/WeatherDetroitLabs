@@ -15,7 +15,16 @@ mockable system to also be used if desired.
 */
 class CurrentLocation: NSObject {
 	private var locationManager: LocationManager
-	var location: CLLocationCoordinate2D?
+	var locManager: LocationManager {
+		get {
+			return self.locationManager
+		}
+	}
+	var location: CLLocationCoordinate2D? {
+		didSet {
+			NotificationCenter.default.post(Constants.locationNotification)
+		}
+	}
 	init(mock: Bool = false) {
 		if mock { locationManager = MockLocationManager() }
 		else { locationManager = CLLocationManager() }

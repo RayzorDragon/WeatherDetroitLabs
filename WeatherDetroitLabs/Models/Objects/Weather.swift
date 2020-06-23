@@ -21,7 +21,7 @@ class Weather: CustomStringConvertible, Decodable {
 	var iconURLString: String {
 		var urlString = Constants.openWeatherIconURL
 		urlString.append(icon)
-		urlString.append("@2x.png")
+		urlString.append(Constants.openWeatherIconURLSuffix)
 		return urlString
 	}
 	

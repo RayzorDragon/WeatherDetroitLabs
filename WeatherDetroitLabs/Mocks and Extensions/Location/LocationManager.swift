@@ -25,4 +25,7 @@ protocol LocationManager {
 	// Wrappers for CLLocationManager class functions.
     func getAuthorizationStatus() -> CLAuthorizationStatus
     func isLocationServicesEnabled() -> Bool
+	
+	// MockLocationManager testing functions.
+	func changeLocation(lat: Double, lon: Double)
 }

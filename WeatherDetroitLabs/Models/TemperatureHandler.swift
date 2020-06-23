@@ -19,7 +19,7 @@ class TemperatureHandler {
 		
 		switch scale {
 		case .fahrenheit:
-			tempString.append("°F")
+			tempString.append(Constants.fahrenheitSymbol)
 		}
 		
 		return tempString

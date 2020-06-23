@@ -11,21 +11,19 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-	let webService = WebServices(session: URLSession.shared, location: CurrentLocation())
+	var webService: WebServices!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		loadAllData()
+
+		setupServices()
+		
 		return true
 	}
 	
-	private func loadAllData() {
-		webService.getCurrentTemperature { (currentWeather, error) in
-			DataStore.sharedInstance.updateCurrent(update: currentWeather)
-		}
-		webService.getForecastTemperature { (fiveDayWeather, error) in
-			DataStore.sharedInstance.updateForecast(update: fiveDayWeather)
-		}
+	private func setupServices() {
+		// moving webService initialization here instead where it's declared because there was a collision with tests and data notifications
+		webService = WebServices(session: URLSession.shared, location: CurrentLocation())
 	}
 
 	// MARK: UISceneSession Lifecycle

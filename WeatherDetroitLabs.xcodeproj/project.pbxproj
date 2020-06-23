@@ -38,6 +38,7 @@
 		7B2A25BE24A16B4300148AE7 /* TestConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25BD24A16B4300148AE7 /* TestConstant.swift */; };
 		7B2A25C124A1720700148AE7 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25C024A1720700148AE7 /* ForecastTableViewCell.swift */; };
 		7B2A25C424A1766A00148AE7 /* UIIamgeView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25C324A1766A00148AE7 /* UIIamgeView+Extension.swift */; };
+		7B2A25C624A275D100148AE7 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2A25C524A275D100148AE7 /* WeatherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		7B2A25BD24A16B4300148AE7 /* TestConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstant.swift; sourceTree = "<group>"; };
 		7B2A25C024A1720700148AE7 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		7B2A25C324A1766A00148AE7 /* UIIamgeView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIamgeView+Extension.swift"; sourceTree = "<group>"; };
+		7B2A25C524A275D100148AE7 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				7B2A2574249ED54B00148AE7 /* CurrentLocationTests.swift */,
 				7B2A25B624A1314A00148AE7 /* TemperatureHandlerTests.swift */,
 				7B2A25BA24A1409B00148AE7 /* DataStoreTests.swift */,
+				7B2A25C524A275D100148AE7 /* WeatherTests.swift */,
 			);
 			path = WeatherDetroitLabsTests;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			files = (
 				7B2A2578249EED9700148AE7 /* WebServicesTests.swift in Sources */,
 				7B2A25BB24A1409B00148AE7 /* DataStoreTests.swift in Sources */,
+				7B2A25C624A275D100148AE7 /* WeatherTests.swift in Sources */,
 				7B2A25BE24A16B4300148AE7 /* TestConstant.swift in Sources */,
 				7B2A2575249ED54B00148AE7 /* CurrentLocationTests.swift in Sources */,
 				7B2A25B724A1314A00148AE7 /* TemperatureHandlerTests.swift in Sources */,

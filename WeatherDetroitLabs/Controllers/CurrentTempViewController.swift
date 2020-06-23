@@ -26,6 +26,8 @@ class CurrentTempViewController: UIViewController {
 	@objc private func currentWeatherUpdate() {
 		if let currentWeather = DataStore.sharedInstance.currentWeather {
 				updateView(with: currentWeather)
+		} else {
+			displayError()
 		}
 	}
 	
@@ -34,6 +36,12 @@ class CurrentTempViewController: UIViewController {
 		DispatchQueue.main.async {
 			let tempString = TemperatureHandler.temperatureString(temp: currentWeather.main.temp, scale: .fahrenheit)
 			self.temperatureLabel.text = tempString
+		}
+	}
+	
+	private func displayError() {
+		DispatchQueue.main.async {
+			self.temperatureLabel.text = Constants.noGeoServiceWarning
 		}
 	}
 

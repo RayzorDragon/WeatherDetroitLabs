@@ -17,4 +17,8 @@ extension CLLocationManager: LocationManager {
     func isLocationServicesEnabled() -> Bool {
         return CLLocationManager.locationServicesEnabled()
     }
+	
+	func changeLocation(lat: Double, lon: Double) {
+		// This exists only for testing and should not be used in production
+	}
 }

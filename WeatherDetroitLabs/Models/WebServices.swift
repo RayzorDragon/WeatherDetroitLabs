@@ -17,6 +17,20 @@ class WebServices {
 		self.session = session
 		self.networkService = Network.init(session: session)
 		self.location = location
+		NotificationCenter.default.addObserver(self, selector: #selector(loadAllData), name: Constants.locationNotification.name, object: nil)
+	}
+	
+	@objc private func loadAllData() {
+		getCurrentTemperature { (currentWeather, error) in
+			DataStore.sharedInstance.updateCurrent(update: currentWeather)
+		}
+		getForecastTemperature { (fiveDayWeather, error) in
+			DataStore.sharedInstance.updateForecast(update: fiveDayWeather)
+		}
+	}
+	
+	deinit {
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 	func getCurrentTemperature(completion: @escaping (CurrentWeather?, Error?) -> Void) {

@@ -7,33 +7,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "986A9609-5A89-4556-AB77-361D355C2FD1"
+            uuid = "441A1389-AC7E-4E30-AB16-480D63226F02"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherDetroitLabs/Mocks and Extensions/UIImageView/UIIamgeView+Extension.swift"
+            filePath = "WeatherDetroitLabs/Models/DataStore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "downloaded(from:contentMode:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "updateForecast(update:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "88F168B2-EC11-4384-A01C-1DC17B204530"
+            uuid = "8DB68ACF-B8D2-43BA-B928-590A4A8A59C4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeatherDetroitLabs/Models/Objects/Weather.swift"
+            filePath = "WeatherDetroitLabs/Models/WebServices.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "iconURLString"
-            landmarkType = "24">
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "loadAllData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8DB68ACF-B8D2-43BA-B928-590A4A8A59C4 - 6d45715b5c87c906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherDetroitLabs.WebServices.(loadAllData in _2353C605793CE50E3FE515A34E757A8B)() -&gt; ()"
+                  moduleName = "WeatherDetroitLabs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raymondgatz/Code/WeatherDetroitLabs/WeatherDetroitLabs/Models/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "8DB68ACF-B8D2-43BA-B928-590A4A8A59C4 - 9bb6417b6db84d97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;WeatherDetroitLabs.CurrentWeather&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WeatherDetroitLabs.WebServices.(loadAllData in _2353C605793CE50E3FE515A34E757A8B)() -&gt; ()"
+                  moduleName = "WeatherDetroitLabs"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raymondgatz/Code/WeatherDetroitLabs/WeatherDetroitLabs/Models/WebServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B6DD64A-4954-4572-A6A1-E98406E4FA4A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherDetroitLabs/Models/WebServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(session:location:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
